@@ -18,10 +18,12 @@ const Home = () => {
     {
       title: "web dev top tips",
       body: "Lorem ipsum",
-      author: "Dan",
+      author: "Danio",
       id: 3,
     },
   ]);
+
+  const [name, setName] = useState("Danio san");
 
   const handleDelete = (id) => {
     const newBlogs = blogs.filter((blog) => blog.id !== id);
@@ -40,6 +42,8 @@ const Home = () => {
         blogs={blogs.filter((blog) => blog.author === "Dan")}
         title="Dan Blogs !"
       />
+      <p>{name}</p>
+      <button onClick={() => setName("Mfala")}>Change name</button>
     </div>
   );
 };
